@@ -1,0 +1,9 @@
+[user]
+	email = johannes.markus.staebler@gmail.com
+	name = Johannes Stäbler
+[core]
+	editor = env -u VIMINIT nvim
+[init]
+	defaultBranch = master
+[github]
+	user = cubicalcucumber

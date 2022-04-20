@@ -50,6 +50,9 @@ vim.opt.fillchars = { vert = "|" }
 -- Indicate wrapped lines.
 vim.opt.showbreak = " ~> "
 
+-- Break on word boundaries.
+vim.opt.linebreak = true
+
 -- Turn on search highlighting.
 vim.opt.incsearch = true
 vim.opt.hlsearch = true

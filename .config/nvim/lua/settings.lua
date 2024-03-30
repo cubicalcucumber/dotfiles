@@ -29,10 +29,6 @@ vim.opt.title = true
 -- Always show the status line.
 vim.opt.laststatus = 2
 
--- Set the color scheme.
-vim.g.colors_name = "rainbow"
-vim.opt.background = "dark"
-
 -- Use relative line numbers.
 vim.opt.relativenumber = true
 vim.opt.number = true

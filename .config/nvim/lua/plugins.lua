@@ -7,6 +7,14 @@ end
 vim.opt.rtp:prepend(lazy_path)
 
 require("lazy").setup {
+
+  {
+    "catppuccin/nvim",
+    lazy = false,
+    priority = 1000,
+    config = function() vim.cmd.colorscheme "catppuccin" end,
+  },
+
   "neovim/nvim-lspconfig",
 
   "nvim-lua/plenary.nvim",

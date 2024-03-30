@@ -17,7 +17,7 @@ require("lazy").setup {
 
   "neovim/nvim-lspconfig",
 
-  "tpope/vim-commentary",
+  { 'numToStr/Comment.nvim', opts = {} },
   "tpope/vim-endwise",
   "tpope/vim-repeat",
   "tpope/vim-surround",

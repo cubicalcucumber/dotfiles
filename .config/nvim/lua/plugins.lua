@@ -15,8 +15,23 @@ require("lazy").setup {
     config = function() vim.cmd.colorscheme "catppuccin" end,
   },
 
-  "neovim/nvim-lspconfig",
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require "ibl".setup {
+        indent = { char = "|" },
+        scope = { enabled = false },
+      }
+    end,
+  },
 
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  "neovim/nvim-lspconfig",
   { 'numToStr/Comment.nvim', opts = {} },
   "tpope/vim-endwise",
   "tpope/vim-repeat",

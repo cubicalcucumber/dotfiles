@@ -29,17 +29,13 @@ map("n", "<leader>sr", ":%s/")
 map("n", "<leader>sc",
     ":%s/\\<<c-r>=expand('<cword>')<cr>//gc<left><left><left>")
 
--- Change directory to parent of current file.
-map("n", "<leader>cd", "<esc>:cd %:p:h<cr>")
-
 
 ----------------
 -- Navigation --
 ----------------
 
-map("n", "<leader>ff", ":Telescope find_files<cr>", { silent = true })
-map("n", "<leader>fb", ":Telescope buffers<cr>",    { silent = true })
-map("n", "<leader>fg", ":Telescope live_grep<cr>",  { silent = true })
+-- Change directory to parent of current file.
+map("n", "<leader>cd", "<esc>:cd %:p:h<cr>")
 
 
 ------------------------

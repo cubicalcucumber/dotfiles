@@ -32,9 +32,17 @@ require("lazy").setup {
   },
 
   { 'numToStr/Comment.nvim', opts = {} },
+
+  {
+    "echasnovski/mini.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("mini.ai").setup {}
+      require("mini.surround").setup {}
+    end,
+  },
+
   "tpope/vim-endwise",
-  "tpope/vim-repeat",
-  "tpope/vim-surround",
 
   "skywind3000/asyncrun.vim",
   "vimwiki/vimwiki",

@@ -17,6 +17,7 @@ require("lazy").setup {
 
   {
     "lukas-reineke/indent-blankline.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require "ibl".setup {
         indent = { char = "|" },
@@ -31,7 +32,11 @@ require("lazy").setup {
     opts = {},
   },
 
-  { 'numToStr/Comment.nvim', opts = {} },
+  {
+    "numToStr/Comment.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {}
+  },
 
   {
     "echasnovski/mini.nvim",
@@ -42,14 +47,24 @@ require("lazy").setup {
     end,
   },
 
-  "tpope/vim-endwise",
+  {
+    "tpope/vim-endwise",
+    event = { "BufReadPre", "BufNewFile" },
+  },
 
-  "skywind3000/asyncrun.vim",
-  "vimwiki/vimwiki",
+  {
+    "skywind3000/asyncrun.vim",
+    event = "VeryLazy",
+  },
+
+  {
+    "vimwiki/vimwiki",
+    event = "VeryLazy",
+  },
 
   {
     "nvim-telescope/telescope.nvim",
-    event = "VimEnter",
+    event = "VeryLazy",
     branch = "0.1.x",
 
     dependencies = {

@@ -27,6 +27,17 @@ require("lazy").setup {
   },
 
   {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      options = {
+        icons_enabled = false,
+        component_separators = "|",
+        section_separators = "",
+      },
+    },
+  },
+
+  {
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {},

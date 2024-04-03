@@ -1,40 +1,37 @@
-local function map(mode, from, to, opts)
-  -- Default to non-recursive mappings.
-  local defaults = { noremap = true }
-  opts = vim.tbl_extend("keep", opts or {}, defaults)
-
-  vim.api.nvim_set_keymap(mode, from, to, opts)
+local map = function(mode, key, func, desc)
+  vim.keymap.set(mode, key, func, { desc = desc })
 end
 
 ----------------
 -- Ergonomics --
 ----------------
 
--- Preserve selections when indenting/dedenting in visual mode.
+-- Preserve selections when indenting/dedenting in visual mode
 map("v", ">", ">gv")
 map("v", "<", "<gv")
 
--- When jumping to the matching bracket, select the inside text.
+-- When jumping to the matching bracket, select the inside text
 map("", "%", "v%")
 
 
----------------------
--- Leader commands --
----------------------
+------------------------
+-- Search and replace --
+------------------------
 
--- Search and replace.
-map("n", "<leader>sr", ":%s/")
+-- Search and replace
+map("n", "<leader>sr", ":%s", "[S]earch and [R]eplace")
 
--- Search and replace the word under the cursor.
+-- Search and replace the word under the cursor
 map("n", "<leader>sc",
-    ":%s/\\<<c-r>=expand('<cword>')<cr>//gc<left><left><left>")
+    ":%s/\\<<c-r>=expand('<cword>')<cr>\\>//gc<left><left><left>",
+    "[S]earch and replace with [C]urrent word")
 
 
 ----------------
 -- Navigation --
 ----------------
 
--- Change directory to parent of current file.
+-- Change directory to parent of current file
 map("n", "<leader>cd", "<esc>:cd %:p:h<cr>")
 
 

@@ -13,6 +13,9 @@ map("v", "<", "<gv")
 -- When jumping to the matching bracket, select the inside text
 map("", "%", "v%")
 
+-- Clear search highlight when pressing escape
+map("n", "<esc>", "<cmd>nohlsearch<cr>")
+
 
 ------------------------
 -- Search and replace --

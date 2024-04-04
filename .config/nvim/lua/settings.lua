@@ -31,9 +31,6 @@ vim.opt.scrolloff = 10
 vim.opt.listchars = { trail = "·", tab = "> " }
 vim.opt.list = true
 
--- Set the vertical separator
-vim.opt.fillchars = { vert = "|" }
-
 -- Set up line breaks
 vim.opt.breakindent = true
 

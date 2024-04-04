@@ -18,11 +18,11 @@ vim.opt.termguicolors = true
 vim.opt.laststatus = 2
 
 -- Use relative line numbers
-vim.opt.relativenumber = true
 vim.opt.number = true
 
 -- Highlight the current line
 vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 
 -- Keep 10 lines above/below the cursor when scrolling
 vim.opt.scrolloff = 10

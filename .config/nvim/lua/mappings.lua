@@ -48,6 +48,12 @@ map("n", "<leader>sc",
 -- Change directory to parent of current file
 map("n", "<leader>cd", "<esc>:cd %:p:h<cr>")
 
+-- Toggle relative numbers
+map("n", "<leader>rn",
+  function()
+    vim.o.relativenumber = not vim.o.relativenumber
+  end, "Toggle relative numbers")
+
 
 ------------------------
 -- File type specific --

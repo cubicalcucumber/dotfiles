@@ -6,6 +6,9 @@ end
 -- Ergonomics --
 ----------------
 
+-- Make entering command mode more ergonomic
+map("n", ";", ":")
+
 -- Preserve selections when indenting/dedenting in visual mode
 map("v", ">", ">gv")
 map("v", "<", "<gv")

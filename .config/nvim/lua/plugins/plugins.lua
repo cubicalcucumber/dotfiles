@@ -13,7 +13,6 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     event = { "BufReadPre", "BufNewFile" },
-    -- enabled = false,
     config = function()
       require "ibl".setup {
         indent = { char = "|" },
@@ -60,11 +59,6 @@ return {
 
   {
     "skywind3000/asyncrun.vim",
-    event = "VeryLazy",
-  },
-
-  {
-    "vimwiki/vimwiki",
     event = "VeryLazy",
   },
 }

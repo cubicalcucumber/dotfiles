@@ -1,0 +1,7 @@
+[keyboard]
+bindings = [{ key = "F11", action = "ToggleFullscreen" }]
+
+[font]
+normal = { family = "SauceCodePro Nerd Font", style = "Medium" }
+bold = { style = "Medium" }
+size = 10

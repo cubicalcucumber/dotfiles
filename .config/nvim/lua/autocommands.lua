@@ -10,9 +10,9 @@ vim.api.nvim_create_autocmd("VimResized", {
 
 -- Highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
-  group = vim.api.nvim_create_augroup("YankHighlightg", { clear = true }),
+  group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
   pattern = "*",
   callback = function()
-    vim.highlight.on_yank({ timeout = 200 })
+    vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
   end,
 })

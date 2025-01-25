@@ -35,12 +35,6 @@ return {
   },
 
   {
-    "numToStr/Comment.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    opts = {}
-  },
-
-  {
     "echasnovski/mini.nvim",
     event = { "BufReadPre", "BufNewFile" },
     config = function()

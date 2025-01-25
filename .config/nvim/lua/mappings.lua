@@ -2,12 +2,20 @@ local map = function(mode, key, func, desc)
   vim.keymap.set(mode, key, func, { desc = desc })
 end
 
+local remap = function(mode, key, func, desc)
+  vim.keymap.set(mode, key, func, { remap = true, desc = desc })
+end
+
 ----------------
 -- Ergonomics --
 ----------------
 
 -- Make entering command mode more ergonomic
 map("n", ";", ":")
+
+-- Nice convenient commenting shortcuts
+remap("n", "<c-n>", "gcc")
+remap("n", "<c-s-n>", "gcip")
 
 -- Preserve selections when indenting/dedenting in visual mode
 map("v", ">", ">gv")

@@ -14,8 +14,8 @@ vim.opt.clipboard = "unnamedplus"
 -- Use 24-bit RGB color in the terminal
 vim.opt.termguicolors = true
 
--- Always show the status line
-vim.opt.laststatus = 2
+-- Always show a global status line
+vim.opt.laststatus = 3
 
 -- Use relative line numbers
 vim.opt.number = true

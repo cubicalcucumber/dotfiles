@@ -13,8 +13,16 @@ return {
   {
     "nvchad/base46",
     lazy = true,
+
     build = function()
       require("base46").load_all_highlights()
     end,
+
+    keys = {
+      {
+        desc = "Pick theme", "<leader>th",
+        function() require("nvchad.themes").open { border = true} end
+      },
+    },
   },
 }

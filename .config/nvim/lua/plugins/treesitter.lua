@@ -62,6 +62,7 @@ return {
     },
 
     config = function(_, opts)
+      dofile(vim.g.base46_cache .. "treesitter")
       require("nvim-treesitter.configs").setup(opts)
     end,
   }

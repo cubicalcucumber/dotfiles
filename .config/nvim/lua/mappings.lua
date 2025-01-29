@@ -28,6 +28,18 @@ map("", "%", "v%")
 map("n", "<esc>", "<cmd>nohlsearch<cr>")
 
 
+--------------------
+-- User Interface --
+--------------------
+
+-- Open a floating terminal
+map({ "n", "t" }, "<A-i>", function()
+  require("nvchad.term").toggle {
+    pos = "float",
+    id = "floating_terminal"
+  }
+end)
+
 ------------------------
 -- Search and replace --
 ------------------------

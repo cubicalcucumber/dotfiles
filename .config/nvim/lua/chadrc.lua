@@ -1,5 +1,10 @@
 return {
   base46 = { theme = "catppuccin", },
+    hl_add = {
+      TabLine     = { bg = "one_bg", fg = "light_grey" },
+      TabLineSel  = { fg = { "white", "light_grey", 30}, },
+      TabLineFill = { bg = "one_bg" },
+    },
 
   ui = {
     statusline = {
